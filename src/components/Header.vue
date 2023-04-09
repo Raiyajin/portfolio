@@ -3,10 +3,10 @@
         <header class="bg-white dark:bg-slate-900 absolute inset-x-0 top-0 z-50">
             <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <div class="flex lg:flex-1">
-                    <a href="#" class="-m-1.5 p-1.5">
+                    <router-link to="/" class="-m-1.5 p-1.5">
                         <span class="sr-only">Home</span>
                         <a class="h-8 w-auto font-bold text-2xl dark:text-gray-200" title="Home page">Rayan HAOUAS</a>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="flex lg:hidden">
                     <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-200" @click="mobileMenuOpen = true">
@@ -15,7 +15,7 @@
                     </button>
                 </div>
                 <div class="hidden lg:flex lg:gap-x-12">
-                    <a v-for="item in navigation" :key="item.name" :href="item.href" :title="item.title" class="text-base font-semibold text-gray-900 dark:text-gray-200">{{ item.name }}</a>
+                    <router-link v-for="item in navigation" :key="item.name"  :to="item.path" :title="item.title" class="text-base font-semibold text-gray-900 dark:text-gray-200">{{ item.name }}</router-link>
                     <a title="Download my resume !" class="text-base font-semibold text-gray-900 dark:text-gray-200 inline" href="/src/assets/RESUME%20HAOUAS%20RAYAN.pdf" download>Resume <svg width="36" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="inline fill-gray-900 dark:fill-gray-200"><path d="M12 3a1 1 0 0 1 1 1v9.586l2.293-2.293a1 1 0 0 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L11 13.586V4a1 1 0 0 1 1-1Z"/><path d="M6 17a1 1 0 1 0-2 0v.6C4 19.482 5.518 21 7.4 21h9.2c1.882 0 3.4-1.518 3.4-3.4V17a1 1 0 1 0-2 0v.6c0 .778-.622 1.4-1.4 1.4H7.4c-.778 0-1.4-.622-1.4-1.4V17Z"/></svg></a>
                     <button title="Switch the dark mode ON/OFF" @click="setDarkMode" class="text-base font-semibold text-gray-900 dark:text-gray-200">
                         <svg width="36" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline fill-gray-900 dark:fill-gray-200">
@@ -36,7 +36,7 @@
                     <div class="mt-6 flow-root">
                         <div class="-my-6 divide-y divide-gray-500/10">
                             <div class="space-y-2 py-6">
-                                <a v-for="item in navigation" :key="item.name" :href="item.href" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-gray-200 dark:hover:text-gray-900 hover:bg-gray-100">{{ item.name }}</a>
+                                <router-link v-for="item in navigation" :key="item.name" :to="item.path" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-gray-200 dark:hover:text-gray-900 hover:bg-gray-100">{{ item.name }}</router-link>
                                 <a title="Download my resume !" class="inline-flex w-fit items-center mr-2 inline rounded-lg px-3 py-2 border text-base font-semibold leading-7 group hover:bg-gray-100 dark:text-gray-200 dark:hover:text-gray-900" href="/src/assets/RESUME%20HAOUAS%20RAYAN.pdf" download>
                                     Resume <svg width="25px" height="30px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="inline fill-gray-900 dark:fill-gray-200 dark:group-hover:fill-gray-900 ml-2"><path d="M12 3a1 1 0 0 1 1 1v9.586l2.293-2.293a1 1 0 0 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L11 13.586V4a1 1 0 0 1 1-1Z"/><path d="M6 17a1 1 0 1 0-2 0v.6C4 19.482 5.518 21 7.4 21h9.2c1.882 0 3.4-1.518 3.4-3.4V17a1 1 0 1 0-2 0v.6c0 .778-.622 1.4-1.4 1.4H7.4c-.778 0-1.4-.622-1.4-1.4V17Z"/>
                                     </svg>
@@ -62,8 +62,8 @@
     import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
 
     const navigation = [
-        { name: 'About me', href: '#', title: 'More about me !' },
-        { name: 'Projects', href: '#', title: 'Check my projects !' },
+        { name: 'About me', path: '/', title: 'More about me !' },
+        { name: 'Projects', path: '/projects', title: 'Check my projects !' },
     ]
 
     const mobileMenuOpen = ref(false)

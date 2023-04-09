@@ -1,17 +1,9 @@
 <script setup>
-import MainPage from './components/About.vue'
-import Header from "./components/Header.vue";
-import ProjectListPage from "./components/ProjectList.vue";
-import Footer from "./components/Footer.vue";
+import HomePage from "./views/HomePage.vue";
 </script>
 
 <template>
 
-  <Header/>
+    <router-view/>
 
-  <MainPage/>
-
-  <ProjectListPage/>
-
-  <Footer/>
 </template>

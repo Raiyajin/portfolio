@@ -9,7 +9,7 @@
                 <p class="text-base font-semibold text-gray-600 dark:text-gray-400">
                     I'm Rayan, a soon to be DevOps Engineer, I love python and am always looking for new challenges in software development projects.
                 </p>
-                <p class="text-base font-semibold text-gray-600 dark:text-gray-400">
+                <p class="pt-2 text-base font-semibold text-gray-600 dark:text-gray-400">
                     This website has been made in order for me to keep a trace of everything I've done that allowed me to reach my objectives.
                 </p>
             </span>
@@ -17,11 +17,11 @@
                 <img class="h-full border-4 rounded-full" src="/src/assets/rayan.png" alt="Picture"/>
             </span>
         </div>
-
     </div>
 </template>
+
 <script>
 export default {
-    name: "MainPage"
+    name: "About"
 }
 </script>
