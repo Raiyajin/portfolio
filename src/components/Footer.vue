@@ -1,5 +1,5 @@
 <template>
-    <footer class="lg:absolute bottom-0 w-full p-4 bg-white dark:bg-slate-900 text-gray-800 dark:text-slate-400">
+    <footer class="relative lg:absolute bottom-0 w-full p-4 bg-white dark:bg-slate-900 text-gray-800 dark:text-slate-400">
         <div class="text-center">
             <p>
                 Copyright © 2023 -
