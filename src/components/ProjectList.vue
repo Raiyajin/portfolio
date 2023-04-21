@@ -5,21 +5,21 @@
                 <h2 class="text-2xl font-bold text-gray-900 dark:text-gray-200">Projects</h2>
 
                 <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
-                    <div v-for="callout in callouts" :key="callout.name" class="group relative">
+                    <div v-for="project in projects" :key="project.name" class="group relative">
                         <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
-                            <img :src="callout.imageSrc" :alt="callout.imageAlt" class="h-full w-full object-cover object-center">
+                            <img :src="project.imageSrc" :alt="project.imageAlt" class="h-full w-full object-cover object-center">
                             <div class="sticky ml-2 inset-2">
-                                <p v-for="tag in callout.tags" class="inline text-white mr-2 bg-slate-800 p-1 rounded-lg font-mono">{{tag}}</p>
+                                <p v-for="tag in project.tags" class="inline text-white mr-2 bg-slate-800 p-1 rounded-lg font-mono">{{tag}}</p>
                             </div>
 
                         </div>
                         <h3 class="mt-6 text-sm text-gray-500 dark:text-gray-200">
-                            <a :href="callout.href">
+                            <a :href="project.href">
                                 <span class="absolute inset-0" />
-                                {{ callout.name }}
+                                {{ project.name }}
                             </a>
                         </h3>
-                        <p class="text-base font-semibold text-gray-900 dark:text-gray-400">{{ callout.description }}</p>
+                        <p class="text-base font-semibold text-gray-900 dark:text-gray-400">{{ project.description }}</p>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@
 </template>
 
 <script setup>
-const callouts = [
+const projects = [
     {
         name: 'Desk and Office',
         description: 'Work from home accessories',
@@ -57,7 +57,7 @@ const callouts = [
 </script>
 
 <script>
-export default {
-    name: "ProjectListPage"
-}
+    export default {
+        name: "ProjectListPage"
+    }
 </script>

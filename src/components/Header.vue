@@ -89,14 +89,12 @@
         } else {
             document.documentElement.classList.add('dark');
         }
-
         isDark.value = document.documentElement.classList.contains('dark')
     }
-
 </script>
 
 <script>
-export default {
-    name: "Header"
-}
+    export default {
+        name: "Header"
+    }
 </script>
